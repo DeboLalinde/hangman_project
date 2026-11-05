@@ -16,3 +16,12 @@ class HangmanGame:
             else:
                 progreso = progreso + "_ "
         return progreso.strip()
+
+    def process_guess(self, letter):
+        """Procesa una letra y devuelve True si está en la palabra."""
+        self.guessed_letters.append(letter)
+        if letter in self.word:
+            return True
+        else:
+            self.errors = self.errors + 1
+            return False
