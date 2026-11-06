@@ -25,3 +25,11 @@ class HangmanGame:
         else:
             self.errors = self.errors + 1
             return False
+
+    def is_lost(self):
+        """Devuelve True si se alcanzó el máximo de errores."""
+        return self.errors >= self.max_errors
+
+    def is_won(self):
+        """Devuelve True si se adivinaron todas las letras."""
+        return "_" not in self.display_progress()
