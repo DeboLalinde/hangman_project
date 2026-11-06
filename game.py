@@ -33,3 +33,13 @@ class HangmanGame:
     def is_won(self):
         """Devuelve True si se adivinaron todas las letras."""
         return "_" not in self.display_progress()
+
+    def display_progress(self):
+        """Devuelve la palabra con las letras adivinadas y guiones."""
+        progreso = ""
+        for letra in self.word:
+            if not letra.isalpha() or letra in self.guessed_letters:
+                progreso = progreso + letra + " "
+            else:
+                progreso = progreso + "_ "
+        return progreso.strip()
