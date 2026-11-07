@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Modulo main de Hangman game."""
+from game import HangmanGame
+from utils import get_random_word
 
 
 def get_valid_letter(guessed_letters):
@@ -20,14 +22,13 @@ def display_game_status(game):
     print("\n---=== HANGMAN ===---")
 
     print("\nPalabra:")
-    game.display_progress()
+    print(game.display_progress())
 
     remaining_attempts = game.max_errors - game.errors
 
     print("\nIntentos restantes:", remaining_attempts, "de", game.max_errors)
 
     print("\nLetras utilizadas:", ",".join(game.guessed_letters))
-
 
     print("-------------------------------------------\n")
 
@@ -46,7 +47,7 @@ def play_game():
         display_game_status(game)
 
     if game.is_won():
-        print("Ganaste!")
+        print("¡Ganaste!")
     else:
         print("Fin del juego")
         print("La palabra era:", game.word)
@@ -64,5 +65,5 @@ def main():
             print("Gracias por jugar!")
             break
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
