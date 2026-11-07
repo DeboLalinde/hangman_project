@@ -13,3 +13,20 @@ def get_valid_letter(guessed_letters):
             print("Ya utilizaste esa letra. Proba con otra.")
         else:
             return letter
+
+
+def display_game_status(game):
+    """Muestra el progreso actual de la partida."""
+    print("\n---=== HANGMAN ===---")
+
+    print("\nPalabra:")
+    game.display_progress()
+
+    remaining_attempts = game.max_errors - game.errors
+
+    print("\nIntentos restantes:", remaining_attempts, "de", game.max_errors)
+
+    print("\nLetras utilizadas:", ",".join(game.guessed_letters))
+
+
+    print("-------------------------------------------\n")
