@@ -30,3 +30,39 @@ def display_game_status(game):
 
 
     print("-------------------------------------------\n")
+
+
+def play_game():
+    """Ejecuta una partida del ahorcado."""
+
+    word = get_random_word()
+    game = HangmanGame(word)
+
+    display_game_status(game)
+
+    while not game.is_won() and not game.is_lost():
+        letter = get_valid_letter(game.guessed_letters)
+        game.process_guess(letter)
+        display_game_status(game)
+
+    if game.is_won():
+        print("Ganaste!")
+    else:
+        print("Fin del juego")
+        print("La palabra era:", game.word)
+
+
+def main():
+    """Inicia el juego y permite jugar nuevamente."""
+
+    while True:
+        play_game()
+
+        answer = input("\nQueres jugar otra partida? (si/no): ").strip().lower()
+
+        if answer != "si":
+            print("Gracias por jugar!")
+            break
+
+if __name__== "__main__":
+    main()
