@@ -1,5 +1,7 @@
 # hangman_project
 
+Juego del ahorcado en consola desarrollado en Python, en equipo, como parte de la Certificación Construyendo con IA.
+
 ## Descripción
 
 El objetivo del juego es adivinar una palabra secreta, ingresando letras una por una. El jugador cuenta con un máximo de 6 errores antes de perder la partida.
