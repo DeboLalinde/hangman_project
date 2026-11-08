@@ -28,7 +28,7 @@ def display_game_status(game):
 
     print("\nIntentos restantes:", remaining_attempts, "de", game.max_errors)
 
-    print("\nLetras utilizadas:", ",".join(game.guessed_letters))
+    print("\nLetras utilizadas:", ", ".join(game.guessed_letters))
 
     print("-------------------------------------------\n")
 
@@ -59,11 +59,12 @@ def main():
     while True:
         play_game()
 
-        answer = input("\nQueres jugar otra partida? (si/no): ").strip().lower()
+        answer = input("\nOtra partida? (si/no): ").strip().lower()
 
         if answer != "si":
             print("Gracias por jugar!")
             break
+
 
 if __name__ == "__main__":
     main()
