@@ -18,3 +18,23 @@ python
 codigo
 celular
 robot
+base de datos
+disco duro
+inteligencia artificial
+pen drive
+sistema operativo
+correo electronico
+red social
+memoria ram
+tarjeta grafica
+e-mail
+realidad virtual
+pantalla tactil
+copia de seguridad
+motor de busqueda
+pagina web
+puerto usb
+seguridad informatica
+aprendizaje automatico
+computacion en la nube
+e-book
